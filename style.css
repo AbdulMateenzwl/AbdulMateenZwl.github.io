@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 html {
     scroll-behavior: smooth;
@@ -10,6 +11,8 @@ html {
 
 body{
     font-family: 'Poppins', sans-serif;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 /* Custom scroll bar code */
@@ -30,8 +33,9 @@ body{
 #main{
     margin: 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 15px;
+    row-gap: 8px;
 }
 
 .card{
@@ -44,7 +48,13 @@ body{
     padding: 10px;
     border-radius: 6px;
     height: 300px;
-    
+}
+
+.card:hover{
+    transform: scale(1.03);
+    transition: 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
 .text-bg{
@@ -87,10 +97,22 @@ body{
     background-image: url("https://images.unsplash.com/photo-1528747045269-390fe33c19f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=700&q=80");
 }
 
+.cardbg-3{
+    background-image: url("https://images.unsplash.com/photo-1545665277-5937489579f2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80");
+}
 
-@media screen and (max-width: 400px) {
+.cardbg-4{
+    background-image: url("https://images.unsplash.com/photo-1480506132288-68f7705954bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=920&q=80");
+}
+
+.cardbg-5{
+    background-image: url("https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=869&q=80");
+}
+
+
+
+@media screen and (max-width: 600px) {
     .card{
-        height: 200px;
         padding: 0;
         overflow: hidden;
     }
@@ -98,5 +120,13 @@ body{
         width: 100%;
         border-radius: 0;
         backdrop-filter: blur(0.3px);
+    }
+    .btn-primary{
+        scale: 1.2;
+    }
+}
+@media screen and (max-width: 400px) {
+    .card{
+        height: 200px;
     }
 }
